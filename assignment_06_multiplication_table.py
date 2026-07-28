@@ -55,3 +55,38 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def single_table(number):
+    print("\nMultiplication Table for", number, ":")
+
+    for i in range(1, 13):
+        print(number, "x", i, "=", number * i)
+
+
+# Part B - Print multiplication tables from 1 to N
+def all_tables(n):
+    if n <= 0:
+        print("Error: Number must be greater than 0.")
+        return
+
+    for number in range(1, n + 1):
+        print("\nMultiplication Table for", number, ":")
+
+        for i in range(1, 13):
+            print(number, "x", i, "=", number * i)
+
+        print("---------------------------")
+
+
+# Main Program
+
+# Part A
+number = int(input("Enter a number: "))
+single_table(number)
+
+# Part B
+n = int(input("\nEnter a number (N): "))
+
+if n <= 0:
+    print("Error: Number must be greater than 0.")
+else:
+    all_tables(n)
